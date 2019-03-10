@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("hay nhap so bat ky"));
+    let i = 0;
+    let writer = "";
+    function SoNguyento(a) {
+        if (a < 2) {return false;}
+        if ( a === 2 ) {return true;}
+        for (let i = 2; i < a; i++) {
+            if ( (a%i) === 0 ){
+                return false;}
+            }
+            return true;
+
+    }
+    if ( SoNguyento(a) ){
+        writer = writer + "<br>" + a + " La so nguyen to";
+    } else {
+        writer = writer + "<br>" + a + " Khong la so nguyen to";
+    }
+    document.write(writer);
+</script>
+</body>
+</html>
